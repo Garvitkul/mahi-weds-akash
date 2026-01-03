@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mahi &amp; Akash Wedding</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#EA2831",
+                        "primary-dark": "#d35400",
+                        secondary: "#800000",
+                        "royal-blue": "#002366",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                        gold: "#DAA520",
+                        "gold-light": "#F9E076",
+                        "gold-dark": "#B8860B"
+                    },
+                    fontFamily: {
+                        display: "Noto Serif",
+                        serif: ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    backgroundImage: {
+                        mandala: "url('https://www.transparenttextures.com/patterns/black-scales.png')",
+                        "gradient-gold": "linear-gradient(135deg, #DAA520 0%, #F9E076 50%, #DAA520 100%)",
+                        "rajasthani-pattern": "url('https://www.transparenttextures.com/patterns/arabesque.png')"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .mandala-spin {
+            animation: spin 80s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(to right, #DAA520, #F9E076, #B8860B, #F9E076, #DAA520);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .rajasthani-border {
+            border-image: linear-gradient(to right, #DAA520, #800000, #DAA520) 1;
+        }
+
+        .decorative-border {
+            border: 1px solid #DAA520;
+            position: relative;
+        }
+
+        .decorative-border::before,
+        .decorative-border::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #DAA520;
+            transition: all 0.3s ease;
+        }
+
+        .decorative-border::before {
+            top: -5px;
+            left: -5px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .decorative-border::after {
+            bottom: -5px;
+            right: -5px;
+            border-left: none;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 overflow-x-hidden transition-colors duration-300">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none bg-rajasthani-pattern"></div>
+        <div class="absolute inset-0 z-0 opacity-15 pointer-events-none">
+            <div class="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] rounded-full border-[2px] border-gold/40 mandala-spin shadow-[0_0_50px_rgba(218,165,32,0.2)]"
+                style="background-image: radial-gradient(circle, transparent 20%, rgba(218, 165, 32, 0.15) 21%, transparent 22%);">
+            </div>
+            <div class="absolute top-[30%] -right-[15%] w-[60vw] h-[60vw] rounded-full border-[2px] border-gold/30 mandala-spin"
+                style="animation-direction: reverse; background-image: radial-gradient(circle, transparent 40%, rgba(218, 165, 32, 0.1) 41%, transparent 42%);">
+            </div>
+        </div>
+        <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden">
+            <div
+                class="relative w-[140vw] h-[140vw] md:w-[60vw] md:h-[60vw] opacity-[0.08] animate-[spin_120s_linear_infinite]">
+                <svg class="w-full h-full text-gold fill-current" viewBox="0 0 500 500">
+                    <defs>
+                        <path d="M250 250 Q 300 150 250 100 Q 200 150 250 250 Z" id="petal"></path>
+                    </defs>
+                    <g>
+                        <use href="#petal" transform="rotate(0, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(22.5, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(45, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(67.5, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(90, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(112.5, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(135, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(157.5, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(180, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(202.5, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(225, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(247.5, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(270, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(292.5, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(315, 250, 250)"></use>
+                        <use href="#petal" transform="rotate(337.5, 250, 250)"></use>
+                    </g>
+                    <circle class="fill-transparent stroke-current stroke-2" cx="250" cy="250" r="30"></circle>
+                    <circle class="fill-transparent stroke-current stroke-[0.5] opacity-50" cx="250" cy="250" r="180">
+                    </circle>
+                </svg>
+            </div>
+            <div class="absolute w-[120vw] h-[120vw] md:w-[50vw] md:h-[50vw] border border-gold/10 rounded-full"></div>
+            <div
+                class="absolute w-[130vw] h-[130vw] md:w-[55vw] md:h-[55vw] border border-dashed border-gold/10 rounded-full animate-[spin_60s_linear_infinite_reverse]">
+            </div>
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-dark to-transparent z-10 pointer-events-none">
+        </div>
+        <div class="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
+            data-alt="Dark moody floral background with gold dust particles"
+            style="background-image: linear-gradient(rgba(44, 10, 15, 0.8), rgba(0, 35, 102, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAz6r2oi4lbtQUhfowo3iklhftav3UMrol0lTKm0IKaDuRBVP4uGzubhUyb9gcEo_m5GgVUsVhgt7At1XF0idfIUEY0iYTcdRBSDCcCuTfaw2FhBDrWti32epNjJwgE659bYw3jddVRoNIK6QuS03D8jagMZjxRjH4saE_f_yeOJ-5tuDzV-YN1X1HWQerIgyK6Q0wRFVZ5yC33yrUGFN5YQslZeUpfNTS1xlRomTGec8uXlRAZQryaDQratmiFd9qnoPyyzo71qLIY');">
+        </div>
+        <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-5xl mx-auto w-full">
+            <div class="mb-6 opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
+                <span class="material-symbols-outlined text-gold text-4xl">local_florist</span>
+            </div>
+            <p
+                class="text-gold-light uppercase tracking-[0.4em] text-xs md:text-sm font-semibold mb-6 opacity-0 animate-[fadeInUp_1s_ease-out_forwards] drop-shadow-md">
+                The Joyous Union Of
+            </p>
+            <h1
+                class="font-serif text-5xl md:text-7xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-100 to-gray-300 font-medium leading-[1.1] mb-2 opacity-0 animate-[fadeInUp_1s_ease-out_0.3s_forwards] drop-shadow-2xl">
+                Mahi <span class="text-gold font-light text-4xl md:text-7xl align-middle mx-2"
+                    style="text-shadow: 0 0 20px rgba(218,165,32,0.5);">&amp;</span> Akash
+            </h1>
+            <div
+                class="w-32 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent my-8 opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]">
+            </div>
+            <div
+                class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 text-gray-200 font-light mb-12 opacity-0 animate-[fadeInUp_1s_ease-out_0.9s_forwards] bg-black/20 py-3 px-8 rounded-full border border-white/5 backdrop-blur-sm">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-gold text-xl">calendar_month</span>
+                    <span class="tracking-wide text-lg">19th Feb, 2026</span>
+                </div>
+                <div class="hidden md:block text-gold text-lg">|</div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-gold text-xl">location_on</span>
+                    <span class="tracking-wide text-lg">Agra, Uttar Pradesh</span>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-4 gap-3 md:gap-6 mb-12 opacity-0 animate-[fadeInUp_1s_ease-out_1.2s_forwards] w-full max-w-2xl">
+                <div
+                    class="flex flex-col items-center p-4 rounded-xl bg-secondary/40 border border-gold/30 backdrop-blur-md shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-2xl md:text-4xl font-bold text-gold font-serif" id="days">--</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-gray-300 mt-1">Days</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 rounded-xl bg-secondary/40 border border-gold/30 backdrop-blur-md shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-2xl md:text-4xl font-bold text-gold font-serif" id="hours">--</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-gray-300 mt-1">Hours</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 rounded-xl bg-secondary/40 border border-gold/30 backdrop-blur-md shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-2xl md:text-4xl font-bold text-gold font-serif" id="minutes">--</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-gray-300 mt-1">Mins</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 rounded-xl bg-secondary/40 border border-gold/30 backdrop-blur-md shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-2xl md:text-4xl font-bold text-gold font-serif" id="seconds">--</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-gray-300 mt-1">Secs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple Section -->
+    <section
+        class="relative py-20 lg:py-28 px-4 sm:px-10 lg:px-40 flex justify-center bg-gradient-to-b from-secondary via-[#3d1113] to-royal-blue"
+        id="couple">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10">
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 to-transparent"></div>
+        <div class="layout-content-container flex flex-col max-w-[1000px] w-full z-10">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h1
+                    class="text-5xl md:text-6xl lg:text-7xl font-display text-gold-light mb-6 tracking-normal drop-shadow-md">
+                    Mahi <span class="text-gold font-serif italic text-4xl align-middle px-2">&amp;</span> Akash
+                </h1>
+                <p class="text-gold-light/80 text-lg md:text-xl max-w-2xl mx-auto font-serif italic leading-relaxed">
+                    With the blessings of our ancestors, we invite you to celebrate the beautiful journey.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 mt-8">
+                <div
+                    class="group relative flex flex-col items-center p-1 rounded-t-full bg-gradient-to-b from-gold/40 to-transparent">
+                    <div
+                        class="w-full h-full p-8 pt-16 flex flex-col items-center bg-secondary/80 backdrop-blur-sm border border-gold/20 rounded-t-[10rem] rounded-b-lg hover:bg-secondary transition-all duration-500 shadow-2xl">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 z-10">
+                            <div
+                                class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gold text-secondary text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm border border-white/20 whitespace-nowrap">
+                                The Bride
+                            </div>
+                        </div>
+                        <div class="mt-8 space-y-4 text-center">
+                            <h3 class="text-3xl font-display text-gold-light">Mahi Kulshrestha</h3>
+                            <div class="flex justify-center">
+                                <span class="material-symbols-outlined text-gold text-xl">spa</span>
+                            </div>
+                            <div class="text-base font-serif text-gold-light/90 leading-relaxed space-y-2">
+                                <p class="text-xs uppercase tracking-widest text-gold mb-2">Daughter of</p>
+                                <p class="text-lg">Mrs. Vineeta Kulshrestha</p>
+                                <p class="text-xs text-gold">&amp;</p>
+                                <p class="text-lg">Mr. Anuj Kulshrestha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative flex flex-col items-center p-1 rounded-t-full bg-gradient-to-b from-gold/40 to-transparent">
+                    <div
+                        class="w-full h-full p-8 pt-16 flex flex-col items-center bg-secondary/80 backdrop-blur-sm border border-gold/20 rounded-t-[10rem] rounded-b-lg hover:bg-secondary transition-all duration-500 shadow-2xl">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 z-10">
+                            <div
+                                class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gold text-secondary text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm border border-white/20 whitespace-nowrap">
+                                The Groom
+                            </div>
+                        </div>
+                        <div class="mt-8 space-y-4 text-center">
+                            <h3 class="text-3xl font-display text-gold-light">Akash Kulshreshth</h3>
+                            <div class="flex justify-center">
+                                <span class="material-symbols-outlined text-gold text-xl">spa</span>
+                            </div>
+                            <div class="text-base font-serif text-gold-light/90 leading-relaxed space-y-2">
+                                <p class="text-xs uppercase tracking-widest text-gold mb-2">Son of</p>
+                                <p class="text-lg">Mrs. Rajmala Kulshreshth</p>
+                                <p class="text-xs text-gold">&amp;</p>
+                                <p class="text-lg">Mr. Mukesh Kulshreshth</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="relative h-24 bg-background-light flex justify-center items-center overflow-hidden">
+        <div class="absolute top-0 w-full h-4 bg-gradient-to-b from-royal-blue/20 to-transparent"></div>
+        <div class="flex items-center gap-4 text-gold opacity-80">
+            <div class="h-[1px] w-32 md:w-64 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+            <span class="material-symbols-outlined text-3xl">local_florist</span>
+            <div class="h-[1px] w-32 md:w-64 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <section class="py-12 lg:py-20 px-4 sm:px-10 lg:px-40 flex justify-center bg-background-light" id="events">
+        <div class="layout-content-container flex flex-col max-w-[1100px] w-full">
+            <div class="flex flex-col items-center mb-16 px-4 text-center">
+                <span class="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-3">Celebrations</span>
+                <h2 class="text-secondary text-4xl md:text-5xl font-display mb-4">Wedding Itinerary</h2>
+                <div class="w-24 h-1 bg-gold mb-6"></div>
+                <p class="text-gray-700 font-serif max-w-xl italic">Join us as we celebrate a lifetime of love and
+                    togetherness.</p>
+            </div>
+            <div class="flex flex-col gap-10">
+                <div
+                    class="relative bg-white shadow-xl hover:shadow-2xl transition-all duration-500 decorative-border p-2 group">
+                    <div class="flex flex-col md:flex-row h-full bg-background-light border border-gold/10">
+                        <div class="relative h-72 md:h-auto md:w-2/5 shrink-0 overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-primary/20 z-10 mix-blend-multiply transition-opacity group-hover:opacity-0">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsSDyqLyd3ptTMFhN5DkRGz5eNnvt5YNhqDp6SE1iQU_XYc2TaLIu7FL30iQ1RG9fjKLySm8SGpYdkGaQtumKAZ6h04GoF74NHiQ1khSmE287ubSTNslYLIh38reJHj9ZfmF-DiDYgpWOtahD-VZPbVTOhRfd2JJS68OAvhlq9Y_9JrF9hpZs3veIdybhAF-G7Ppwc9JfRkn9xonqnH4Uor5ultt-uYs_i2vSTRty0J37P6b1UQMPHL3UrLRfMhCa5AGoJVuUjG4CB');">
+                            </div>
+                            <div
+                                class="absolute top-0 left-0 bg-primary text-white px-4 py-3 z-20 shadow-lg rounded-br-lg">
+                                <div class="text-2xl font-display font-bold leading-none text-center">18</div>
+                                <div class="text-[10px] uppercase tracking-wider font-bold text-center mt-1">Feb 2026
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center p-8 md:p-12 md:w-3/5">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">wb_sunny</span>
+                                <span
+                                    class="text-primary text-xs font-bold tracking-[0.2em] uppercase border-b border-primary/30 pb-1">Pre-Wedding</span>
+                            </div>
+                            <h3
+                                class="text-3xl font-display text-secondary mb-3 group-hover:text-primary transition-colors">
+                                Haldi, Mehndi &amp; Sangeet</h3>
+                            <p class="text-gray-700 mb-8 font-serif leading-relaxed">
+                                A vibrant tapestry of colors, melodies, and joy. Immerse yourself in the traditional
+                                rituals of turmeric and henna, followed by an evening of musical euphoria.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-auto pt-6 border-t border-gold/20">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="p-2 border border-gold/50 rounded-full text-secondary shrink-0 bg-gold-light/20">
+                                        <span class="material-symbols-outlined text-xl">schedule</span>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-secondary font-bold font-display uppercase tracking-wider text-sm">
+                                            Afternoon</p>
+                                        <p class="text-gray-600 text-xs font-serif italic">Day-long festivities</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="p-2 border border-gold/50 rounded-full text-secondary shrink-0 bg-gold-light/20">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-secondary font-bold font-display uppercase tracking-wider text-sm">
+                                            H. No. 110, Near Khyati Hospital</p>
+                                        <p class="text-gray-600 text-xs font-serif italic">Paschimpuri, Agra</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-white shadow-xl hover:shadow-2xl transition-all duration-500 decorative-border p-2 group mt-4">
+                    <div class="flex flex-col md:flex-row h-full bg-background-light border border-gold/10">
+                        <div class="flex flex-col justify-center p-8 md:p-12 md:w-3/5 order-2 md:order-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-secondary text-2xl">favorite</span>
+                                <span
+                                    class="text-secondary text-xs font-bold tracking-[0.2em] uppercase border-b border-secondary/30 pb-1">The
+                                    Main Event</span>
+                            </div>
+                            <h3
+                                class="text-3xl font-display text-secondary mb-3 group-hover:text-gold transition-colors">
+                                The Wedding Ceremony</h3>
+                            <p class="text-gray-700 mb-8 font-serif leading-relaxed">
+                                Under the starlit sky, amidst the chanting of vedic mantras, we take our seven vows. We
+                                request the honor of your presence as we unite our souls.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-auto pt-6 border-t border-gold/20">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="p-2 border border-gold/50 rounded-full text-secondary shrink-0 bg-gold-light/20">
+                                        <span class="material-symbols-outlined text-xl">schedule</span>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-secondary font-bold font-display uppercase tracking-wider text-sm">
+                                            7:00 PM</p>
+                                        <p class="text-gray-600 text-xs font-serif italic">Reception to follow</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="p-2 border border-gold/50 rounded-full text-secondary shrink-0 bg-gold-light/20">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-secondary font-bold font-display uppercase tracking-wider text-sm">
+                                            Sagar Palace</p>
+                                        <p class="text-gray-600 text-xs font-serif italic">Paschimpuri, Agra</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative h-72 md:h-auto md:w-2/5 shrink-0 overflow-hidden order-1 md:order-2">
+                            <div
+                                class="absolute inset-0 bg-secondary/20 z-10 mix-blend-multiply transition-opacity group-hover:opacity-0">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcJ2TB4kvS6gX6VRVVU21GaH0N_j1kDXvuBD3jVS6ut9FtSATy6inH214j1brg6Y6ViQNNv_ZPoAT7IfKEGzk8xiR7EVelxlxL29aE-sI4rIRqXHkjETrPKRkmdhuhu3CA0VxzzgK_1eLfT3tHK1uvlQEK4_m8_VSjgkh6H86SGt7d2eHoDnwuZq3Yw3fcgG1OEDfsemq_PQGlrwc_JFVUa51i7MeYqWh6In1ML36u8ayD10Gafq6ORYPsOPMoxcDzYwk33khWiO_9');">
+                            </div>
+                            <div
+                                class="absolute top-0 right-0 bg-secondary text-white px-4 py-3 z-20 shadow-lg rounded-bl-lg">
+                                <div class="text-2xl font-display font-bold leading-none text-center">19</div>
+                                <div class="text-[10px] uppercase tracking-wider font-bold text-center mt-1">Feb 2026
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <div class="w-full bg-secondary border-y-4 border-double border-gold/20 relative overflow-hidden shadow-2xl">
+        <div class="absolute -left-20 -bottom-20 w-64 h-64 border-[20px] border-gold/5 rounded-full z-0"></div>
+        <div class="absolute -right-20 -top-20 w-64 h-64 border-[20px] border-gold/5 rounded-full z-0"></div>
+        <div class="max-w-[960px] mx-auto px-4 py-24 flex flex-col items-center text-center relative z-10">
+            <div class="size-20 rounded-full bg-gradient-to-br from-gold to-primary p-0.5 mb-8 shadow-xl">
+                <div class="w-full h-full rounded-full bg-secondary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-gold text-4xl">mark_email_unread</span>
+                </div>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-serif text-white mb-6 leading-tight">
+                We look forward to <br /><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">celebrating
+                    with you</span>
+            </h2>
+            <p class="text-gray-200 max-w-xl mb-12 text-lg leading-relaxed font-light">
+                Your presence creates our memories. We can't wait to share this joyous occasion with our favorite people
+                in true royal spirit.
+            </p>
+            <div
+                class="inline-flex flex-col md:flex-row items-center bg-royal-blue/80 border border-gold/40 rounded-full p-2 pr-2 md:pr-10 gap-3 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:border-gold transition-colors duration-300 backdrop-blur-sm group">
+                <div
+                    class="size-14 rounded-full bg-gradient-to-br from-gold to-primary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-white text-2xl">call</span>
+                </div>
+                <div class="flex flex-col items-center md:items-start px-4 py-2 md:py-0">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-gold mb-1">RSVP &amp; Inquiries</span>
+                    <span class="text-white font-serif text-xl tracking-wide">Anuj Kulshrestha</span>
+                </div>
+                <div
+                    class="h-px w-3/4 md:w-px md:h-10 bg-gradient-to-r md:bg-gradient-to-b from-transparent via-white/20 to-transparent my-2 md:my-0">
+                </div>
+                <a class="text-primary hover:text-gold transition-colors font-bold text-xl px-2 tracking-wide font-display"
+                    href="tel:6398304250">
+                    6398304250
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation config for Tailwind
+        tailwind.config.theme.extend.keyframes = {
+            ...tailwind.config.theme.extend.keyframes,
+            fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+        }
+        // Countdown Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Updated Date: Feb 19, 2026
+            const targetDate = new Date('February 19, 2026 00:00:00').getTime();
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                if (distance < 0) {
+                    document.getElementById('days').innerText = "00";
+                    document.getElementById('hours').innerText = "00";
+                    document.getElementById('minutes').innerText = "00";
+                    document.getElementById('seconds').innerText = "00";
+                    return;
+                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById('days').innerText = days;
+                document.getElementById('hours').innerText = hours < 10 ? "0" + hours : hours;
+                document.getElementById('minutes').innerText = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById('seconds').innerText = seconds < 10 ? "0" + seconds : seconds;
+            }
+            setInterval(updateTimer, 1000);
+            updateTimer(); // run immediately
+        });
+    </script>
+
+</body>
+
+</html>
